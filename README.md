@@ -1,6 +1,4 @@
-# expense_tracker
-
-A new Flutter project.
+App para controle de gastos utilizando Flutter
 
 ## Getting Started
 
