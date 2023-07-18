@@ -12,14 +12,17 @@ class ExpensesList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      // Provide constraints for the ListView
       constraints: BoxConstraints(
         maxHeight:
-            MediaQuery.of(context).size.height, // Adjust the height as needed
+            MediaQuery.of(context).size.height,
       ),
       child: ListView.builder(
         itemCount: expenses.length,
         itemBuilder: (ctx, index) => Dismissible(
+          background: Container(
+              color: Theme.of(context).colorScheme.error.withOpacity(0.75),
+              margin: EdgeInsets.symmetric(horizontal: Theme.of(context).cardTheme.margin!.horizontal),
+          ),
           key: ValueKey(
             expenses[index],
           ),
